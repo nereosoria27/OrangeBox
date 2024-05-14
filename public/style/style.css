@@ -1,8 +1,7 @@
 /* Style goes here UwU nereo */
-@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Zen+Tokyo+Zoo&display=swap');
 body{
     background-color:#090018;
 }
@@ -113,6 +112,71 @@ body{
     margin-left: 10%;
 }
 
+.linediag {
+    background-image: repeating-linear-gradient(-45deg, transparent, transparent 10px, currentcolor 10px, currentcolor 12px);
+    padding: 0px;
+    aspect-ratio: 10 / 1;
+    border: 0px;
+    display: block;
+    color: inherit;
+    color: #FF4500;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-top: 20px;
+    }
+    .circle {
+    transform: rotate(-90deg);
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: conic-gradient(#FF4500, #0B011E);
+    margin-left: 188px;
+
+}
+
+.building {
+    display: flex; /* Hacemos que los elementos se alineen horizontalmente */
+
+    color:#FF4500;
+    margin-top: 50px;
+
+  }
+  
+
+  .hline {
+    width: 7px;
+    height: 178px;
+    background-image: linear-gradient(#FF4500, #0B011E);
+    margin-left: 174px;
+    margin-right: 20px;
+    border: 0px solid ;
+    margin-top: 40px;
+
+  }
+  
+  .text {
+    flex: 1; /* Hacemos que el texto ocupe todo el espacio restante */
+    margin-top: 40px;
+    
+
+  }
+  
+  .title {
+    margin-top: 0;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .description {
+    margin-bottom: 0;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin-right: 100px;
+  }
   @media (max-width: 768px) {
     .navbar-container {
       flex-direction: column;
