@@ -6,14 +6,14 @@ const express = require('express')
 // DB config
 
 // todavia no hay db creada, necesito estar en casita
-try{
-    async function main() {
-        await mongoose.connect('mongodb://127.0.0.1:27017/test'); 
-        console.log("Conected succesfuly")
-    }
-}catch(err){
-    console.log(err)
-}
+//try{
+//    async function main() {
+//        await mongoose.connect('mongodb://127.0.0.1:27017/test'); 
+//        console.log("Conected succesfuly")
+//    }
+//}catch(err){
+//    console.log(err)
+//}
 
 // Creating schema
 
@@ -32,7 +32,7 @@ app.use(express.static('public'))
 
 // Main
 app.get('/', (req, res)=>{
-    res.render('landingPage.ejs')
+    res.render('index.ejs')
 })
 
 // Listen to port (port is in Server config at line 4)
