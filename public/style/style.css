@@ -17,7 +17,7 @@ body{
 }
 
 .linea2 {
-    margin-top: 60px;
+    margin-top: 20px;
     height: 3px;
     width: 70%;
     margin-left: 15%;
@@ -228,8 +228,12 @@ body{
     flex-direction: row-reverse; /* Invertir la dirección de los elementos */
     border-radius: 11px;
     border: 2px solid #FF4500;
-    padding: 70px;
-    padding-left: 10px;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+
 }
 
 .flipped-circle {
