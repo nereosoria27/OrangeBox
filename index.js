@@ -4,16 +4,15 @@ const ejs = require('ejs')
 const express = require('express')
 
 // DB config
-
-// todavia no hay db creada, necesito estar en casita
-//try{
-//    async function main() {
-//        await mongoose.connect('mongodb://127.0.0.1:27017/test'); 
-//        console.log("Conected succesfuly")
-//    }
-//}catch(err){
-//    console.log(err)
-//}
+// Base de datos no creada todavia
+try{
+    async function main() {
+        await mongoose.connect('mongodb://127.0.0.1:27017/orangebox'); 
+        console.log("Conected succesfuly")
+    }
+}catch(err){
+    console.log(err)
+}
 
 // Creating schema
 
