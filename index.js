@@ -15,7 +15,18 @@ try{
 }
 
 // Creating schema
+const productSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true,
+    },
+    cost: {
+        type: Number,
+        required: true,
+        min: 250000
+    }
 
+})
 
 // Server config
 const app = express()
@@ -32,6 +43,11 @@ app.use(express.static('public'))
 // Main
 app.get('/', (req, res)=>{
     res.render('index.ejs')
+})
+
+// Other routes
+app.get('/login', (req, res)=>{
+    res.render('login.ejs')
 })
 
 // Listen to port (port is in Server config at line 4)
