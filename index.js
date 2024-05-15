@@ -47,7 +47,7 @@ app.get('/', (req, res)=>{
 
 // Other routes
 app.get('/login', (req, res)=>{
-    res.render('login.ejs')
+    res.render('logIn.ejs')
 })
 
 // Listen to port (port is in Server config at line 4)
