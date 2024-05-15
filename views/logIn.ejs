@@ -4,9 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log In</title>
-    <link rel="stylesheet" href="public\style\style.css">
+    <link rel="stylesheet" href="/style/style.css">
 </head>
 <body>
-    hola mundo
+    <div class="linea"></div>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+              <div class="navbar-links">
+                <a href="login" class="actual-link">Log In</a>
+                <a href="" class="navbar-link">Home</a>
+                <a href="" class="navbar-link">About us</a>
+                <a href="" class="navbar-link">Register</a>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <div class="logincont">
+        <h1> Log In </h1>
+        <div class="linea2"></div>
+        <hr class="linediag2">
+      <div class="form">
+        <label for="user" class="usertext">Nombre o Correo electrónico</label> <br>
+        <input type="text" id="user" name="user" class="user"><br><br>
+    
+        <label for="password" class="passwordtext">Contraseña</label> <br>
+        <input type="password" id="password" name="password" class="password">
+        <div class="captcha">
+          <input type="checkbox" name="chkbox" id="chkbox">
+          <label for="chkbox">Comprueba que nos eres un robot.</label>
+      </div>
+    </div>
+    </div>
 </body>
 </html>

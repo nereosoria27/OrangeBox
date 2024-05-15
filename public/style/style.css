@@ -323,6 +323,90 @@ body{
 }
 
 
+/*Log In*/
+
+.logincont {
+  background-color: #0B011E;
+  color: #FF4500;
+  border: 1px solid #FF4500;
+  margin-left: 320px;
+  margin-right: 320px;
+  margin-top: 60px;
+}
+
+.logincont h1 {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin-left: 42%;
+    margin-top: 50px;
+}
+
+.linediag2 {
+  background-image: repeating-linear-gradient(-45deg, transparent, transparent 10px, currentcolor 10px, currentcolor 12px);
+  padding: 0px;
+  aspect-ratio: 7 / 1;
+  border: 0px;
+  display: block;
+  color: inherit;
+  color: #FF4500;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 20px;
+  }
+.form {
+  margin-left: 70px;
+  margin-top: 20px;
+  font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.form label {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+
+.form input {
+  width: 540px; /* Ancho del input */
+  height: 40px; /* Alto del input */
+  font-size: 16px; /* Tamaño de la fuente */
+  padding: 8px; /* Espacio interno del input */
+  border-radius: 4px; /* Radio de borde */
+  border: 1px solid #FF4500; /* Borde */
+  background-color: #090018;
+  box-sizing: border-box; /* Tamaño total del elemento incluyendo el borde */
+  margin-bottom: 20px; /* Espacio entre los inputs */
+  margin-top: 10px;
+}
+
+.captcha {
+  display: flex;
+  align-items: center;
+  transform: translateX(-18px);
+}
+
+/* Estilos para el checkbox */
+input[type="checkbox"] {
+  flex: 1;
+  margin-right: 0px; /* Espacio entre el checkbox y el texto */
+  width: 20px; /* Ancho del checkbox */
+  height: 20px; /* Alto del checkbox */
+  border: 2px solid orange; /* Borde naranja */
+  border-radius: 4px; /* Radio de borde */
+  background-color: black; /* Color de fondo negro */
+  cursor: pointer; /* Cursor de puntero */
+}
+input[type="checkbox"]:checked {
+  background-color: orange; /* Cambiar el fondo a naranja cuando está marcado */
+}
+
+.captcha label {
+  flex: 8;
+}
+
   @media (max-width: 768px) {
     .navbar-container {
       flex-direction: column;
