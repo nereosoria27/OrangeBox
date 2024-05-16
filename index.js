@@ -14,20 +14,6 @@ try{
     console.log(err)
 }
 
-// Creating schema
-const productSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true,
-    },
-    cost: {
-        type: Number,
-        required: true,
-        min: 250000
-    }
-
-})
-
 // Server config
 const app = express()
 const port = 8080
@@ -48,6 +34,18 @@ app.get('/', (req, res)=>{
 // Other routes
 app.get('/login', (req, res)=>{
     res.render('logIn.ejs')
+})
+
+app.get('/register', (req, res)=>{
+    res.render('register.ejs')
+})
+
+app.get('/home', (req, res)=>{
+    res.render('index.ejs')
+})
+
+app.get('/about-us', (req, res)=>{
+    res.render('aboutUs.ejs')
 })
 
 // Listen to port (port is in Server config at line 4)

@@ -377,6 +377,7 @@ body{
   border-radius: 4px; /* Radio de borde */
   border: 1px solid #FF4500; /* Borde */
   background-color: #090018;
+  color: #FF4500;
   box-sizing: border-box; /* Tamaño total del elemento incluyendo el borde */
   margin-bottom: 20px; /* Espacio entre los inputs */
   margin-top: 10px;
