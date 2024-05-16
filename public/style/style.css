@@ -386,7 +386,7 @@ body{
 .captcha {
   display: flex;
   align-items: center;
-  transform: translateX(-18px);
+  transform: translateX(-28px);
 }
 
 /* Estilos para el checkbox */
@@ -406,7 +406,47 @@ input[type="checkbox"]:checked {
 
 .captcha label {
   flex: 8;
+  transform: translateY(5px);
 }
+
+.mi-boton {
+  background-color: #FF4500; /* Color de fondo */
+  border: none; /* Sin borde */
+  color: white; /* Color de texto */
+  padding: 15px 32px; /* Espacio interior */
+  text-align: center; /* Alineación del texto */
+  text-decoration: none; /* Sin decoración de texto */
+  display: inline-block; /* Mostrar como bloque en línea */
+  font-size: 16px; /* Tamaño de fuente */
+  margin: 4px 2px; /* Margen */
+  cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+  border-radius: 100px; /* Radio de borde para esquinas redondeadas */
+  margin-top: 30px;
+  margin-bottom: 90px;
+}
+
+.acceder {
+  display: flex;
+  flex: row;
+  font-size:small;
+  text-align: center;
+  color:#FF4500;
+  margin-left: 38%;
+  margin-top: 20px;
+  font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.access {
+  margin-left: 8px;
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+
+
+
 
   @media (max-width: 768px) {
     .navbar-container {
