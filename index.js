@@ -173,6 +173,13 @@ const pcArmadaSchema = new mongoose.Schema({
     //imagen: required
     //modelo: id
 })
+
+// pcArmada Virtual: Get Components
+pcArmadaSchema.virtual('getComponents').get(function(){
+    return `${this.caracteristicas}`
+})
+
+
 const PcArmada = mongoose.model('PcArmada', pcArmadaSchema)
 
 // Crear collecion u-u
@@ -242,6 +249,14 @@ app.get('/', (req, res)=>{
 // Other routes
 app.get('/login', (req, res)=>{
     res.render('login.ejs')
+})
+
+app.get('/register', (req, res)=>{
+    res.render('register.ejs')
+})
+
+app.get('/pc-armadas', (req, res)=>{
+    res.render('pcArmadas.ejs')
 })
 
 // Listen to port (port is in Server config at line 4)
