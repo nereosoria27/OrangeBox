@@ -14,6 +14,11 @@ try{
     console.log(err)
 }
 
+// Function await saving
+const awaitSave = async (object) =>{
+    await object.save()
+}
+
 // Creating schema
 const productSchema = new mongoose.Schema({
     name: {
@@ -34,8 +39,6 @@ const productSchema = new mongoose.Schema({
 })
 const Product = new mongoose.model('Product', productSchema)
 
-// Crear collecion productos
-Product.createCollection()
 
 // Creating pcArmadaSchema
 const pcArmadaSchema = new mongoose.Schema({
@@ -67,8 +70,7 @@ const pcArmadaSchema = new mongoose.Schema({
             discoSolido: {
                 type: Number,
                 required: true,
-            },
-            required: true
+            }
         },
 
         // Conectividad
@@ -78,8 +80,7 @@ const pcArmadaSchema = new mongoose.Schema({
                 required: true
             },
             ethernet: Boolean,
-            Bluetooth: Boolean,
-            required: true
+            Bluetooth: Boolean
         },
 
         // Graficos
@@ -99,8 +100,7 @@ const pcArmadaSchema = new mongoose.Schema({
             memoria:{
                 type: String,
                 required: true
-            },
-            required: false
+            }
         },
 
         // Memoria
@@ -112,13 +112,16 @@ const pcArmadaSchema = new mongoose.Schema({
             expandible:{
                 type: Boolean,
                 required: true
-            },
-            required: true
+            }
         },
 
         // Procesador
         procesador:{
-            //solo amd o intel, averigua despue culia
+            fabricante: {
+                type: String,
+                required: true,
+                enum: ['AMD', 'Intel']
+            },
             modelo:{
                 type: String,
                 required: false
@@ -135,8 +138,7 @@ const pcArmadaSchema = new mongoose.Schema({
                     required: true,
                     max: 16,
                     min: 4,
-                },
-                required: true
+                }
             },
             frecuencia: {
                 type: Number,
@@ -145,8 +147,7 @@ const pcArmadaSchema = new mongoose.Schema({
             cache:{
                 type: String,
                 required: true
-            },
-            required: true
+            }
         },
         puertos:{
             usb:{
@@ -160,15 +161,13 @@ const pcArmadaSchema = new mongoose.Schema({
             audio:{
                 type: Boolean,
                 required: true
-            },
-            required: true,
+            }
         },
 
-        //uso:{
-            // Añadir arrays de usos cuando me acuerde culia
-            // hogar o oficina
-            // gaming, arquitectura, diseño, edicion
-        //}
+        uso: {
+            type: [String],
+            enum: ['Hogar', 'Oficina', 'Gaming', 'Arquitectura', 'Diseño', 'Edición']
+        }
     }
     //imagen: required
     //modelo: id
@@ -181,13 +180,12 @@ pcArmadaSchema.virtual('getComponents').get(function(){
 
 
 const PcArmada = mongoose.model('PcArmada', pcArmadaSchema)
+PcArmada.createCollection()
 
-// Crear collecion u-u
-pcArmada.createCollection()
 
 // Ejemplo de pc armada (no borrar)
-const kairosPro = new pcArmada({
-    nomnbre: "KairosPro",
+const kairosPro = new PcArmada({
+    name: "KairosPro",
     cost: 1351447,
     description: "Este equipo fue ensamblado por OrangeBox",
     caracteristicas:{
@@ -210,6 +208,7 @@ const kairosPro = new pcArmada({
             expandible: true
         },
         procesador:{
+            fabricante: 'AMD',
             modelo: "4000G",
             nucleos:{
                 nucle: 4,
@@ -222,12 +221,14 @@ const kairosPro = new pcArmada({
             usb: true,
             hdmi: true,
             audio: true
-        }
+        },
+        uso: ['Hogar', 'Gaming', 'Arquitectura']
     }
 })
 
 // Saving kariosPro into pcArmadas table
-kairosPro.save()
+awaitSave(kairosPro)
+
 
 // Server config
 const app = express()
@@ -258,6 +259,11 @@ app.get('/register', (req, res)=>{
 app.get('/pc-armadas', (req, res)=>{
     res.render('pcArmadas.ejs')
 })
+
+
+
+
+
 
 // Listen to port (port is in Server config at line 4)
 app.listen(port, ()=>{
