@@ -3,16 +3,15 @@ const mongoose = require('mongoose')
 const ejs = require('ejs')
 const express = require('express')
 
-// DB config
-// Base de datos no creada todavia
-try{
-    async function main() {
-        await mongoose.connect('mongodb://127.0.0.1:27017/orangebox'); 
-        console.log("Conected succesfuly")
-    }
-}catch(err){
-    console.log(err)
-}
+// DB joining
+mongoose.connect('mongodb://localhost:27017/orangebox')
+    .then(()=>{
+        console.log("Conection succesful")
+    })
+    .catch((err)=>{
+        console.log(err)
+    })
+
 
 // Function await saving
 const awaitSave = async (object) =>{
