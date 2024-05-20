@@ -18,38 +18,34 @@ const awaitSave = async (object) =>{
 }
 
 // Seeds
-const kairosPro = new PcArmada({
-    name: "KairosPro",
-    cost: 1351447,
-    description: "Este equipo fue ensamblado por OrangeBox",
+const athlon = new PcArmada({
+    name: "PC AMD ATHLON",
+    cost: 308087,
+    description: "Este equipo fue ensamblado por OrangeBox. PC ideal para uso hogareño y de oficina, excelente relación entre precio y potencia."
+    ,
     caracteristicas:{
         almacenamiento:{
-            discoDuro: true,
+            discoDuro: false,
             interfaz: "Sata 2.5",
             discoSolido: 240
         },
         conectividad:{
             wifi: true,
-        },
-        graficos:{
-            motor: "Asus Nvidia",
-            modelo: "RTX 4060Ti",
-            vram: 8,
-            memoria: "GDDR6"
+            ethernet: true,
         },
         memoria:{
-            capacidad: 16,
+            capacidad: 4,
             expandible: true
         },
         procesador:{
-            fabricante: 'AMD',
-            modelo: "4000G",
+            fabricante: 'Athlon',
+            modelo: "3000G",
             nucleos:{
-                nucle: 4,
-                subprocesos: 8
+                nucle: 2,
+                subprocesos: 4
             },
-            frecuencia: 4,
-            cache: "4Mb cache"
+            frecuencia: 3.5,
+            cache: "4Mb StamartCache"
         },
         puertos:{
             usb: true,
@@ -61,8 +57,9 @@ const kairosPro = new PcArmada({
 })
 
 
+
 // Array with all PC's
-const allPcs = []
+const allPcs = [athlon]
 
 // Saving
 PcArmada.insertMany(allPcs)
