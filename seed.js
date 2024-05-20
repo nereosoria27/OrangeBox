@@ -130,12 +130,8 @@ const amdRyzen5 = new PcArmada({
 })
 
 // Array with all PC's
-const allPcs = [amdRyzen3]
+const allPcs = [amdRyzen3, athlon, amdRyzen5]
 
-
-// Array with all PC's
-const allPcs = [athlon]
->>>>>>> 185d6214e05dfd6669799b0af0c605dd741720c9
 
 // Saving
 PcArmada.insertMany(allPcs)
