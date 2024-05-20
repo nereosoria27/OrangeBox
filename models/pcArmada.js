@@ -96,7 +96,7 @@ const pcArmadaSchema = new mongoose.Schema({
                 },
                 subprocesos:{
                     type: Number,
-                    required: true,
+                    required: false,
                     max: 16,
                     min: 4,
                 }
