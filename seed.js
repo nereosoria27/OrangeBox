@@ -10,12 +10,6 @@ mongoose.connect('mongodb://localhost:27017/orangebox')
         console.log(err)
     })
 
-
-// Function await saving
-const awaitSave = async (object) =>{
-    await object.save()
-}
-
 // Seeds
 const athlon = new PcArmada({
     name: "PC AMD ATHLON",

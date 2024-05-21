@@ -16,8 +16,16 @@ const productSchema = new mongoose.Schema({
         type: String,
         required: false,
     },
-    //imagen: required
-    //modelo: id
+    tipo: {
+        required: true,
+        type: String,
+        enum: ['Microprocesador', 'Motherboard', 'Ram', 'Disco Duro', 'Disco SSD', 'Placa de Video', 'Gabinete', 'Cooler']
+    },
+    fabricante: {
+        required: false,
+        type: String,
+        enum: ['AMD', 'Intel', 'ASRock', 'ASUS', 'NVIDIA', 'Crucial', 'MarkVision', 'Seagate', 'WesternDigital', 'HIK', 'ADATA', 'Gamdias']
+    }
 })
 
 // Product model
