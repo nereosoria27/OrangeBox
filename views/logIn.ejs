@@ -7,40 +7,67 @@
     <link rel="stylesheet" href="/style/style.css">
 </head>
 <body>
-    <div class="linea"></div>
-    <header>
-        <nav class="navbar">
-            <div class="navbar-container">
+  <div class="linea"></div>
+  <header>
+      <nav class="navbar">
+          <div class="navbar-container">
               <div class="navbar-links">
-                <a href="login" class="actual-link">Log In</a>
-                <a href="" class="navbar-link">Home</a>
-                <a href="" class="navbar-link">About us</a>
-                <a href="" class="navbar-link">Register</a>
+                  <a href="login" class="actual-link">Log In</a>
+                  <a href="" class="navbar-link">Home</a>
+                  <a href="" class="navbar-link">About us</a>
+                  <a href="" class="navbar-link">Register</a>
               </div>
-            </div>
-          </nav>
-    </header>
+          </div>
+      </nav>
+  </header>
 
-    <div class="logincont">
-        <h1> Log In </h1>
-        <div class="linea2"></div>
-        <hr class="linediag2">
-      <div class="form">
-        <label for="user" class="usertext">Nombre o Correo electrónico</label> <br>
-        <input type="text" id="user" name="user" class="user"><br><br>
-    
-        <label for="password" class="passwordtext">Contraseña</label> <br>
-        <input type="password" id="password" name="password" class="password">
-        <div class="captcha">
-          <input type="checkbox" name="chkbox" id="chkbox">
-          <label for="chkbox">Comprueba que nos eres un robot.</label>
+  <div class="containerl">
+      <div class="card">
+          <div class="logincont">
+              <h1> Log In </h1>
+              <div class="linea2"></div>
+              <hr class="linediag2">
+              <div class="form">
+                  <label for="user" class="usertext">Nombre o Correo electrónico</label> <br>
+                  <input type="text" id="user" name="user" class="user"><br><br>
+
+                  <label for="password" class="passwordtext">Contraseña</label> <br>
+                  <input type="password" id="password" name="password" class="password">
+                  <div class="captcha">
+                      <input type="checkbox" name="chkbox" id="chkbox">
+                      <label for="chkbox">Comprueba que no eres un robot.</label>
+                  </div>
+                  <button class="mi-boton">Log In</button>
+              </div>
+          </div>
+          <div class="registercont">
+              <h1> Register </h1>
+              <div class="linea2"></div>
+              <hr class="linediag2">
+              <div class="form">
+                  <label for="username" class="usertext">Nombre de usuario</label> <br>
+                  <input type="text" id="username" name="username" class="user"><br><br>
+
+                  <label for="email" class="emailtext">Correo electrónico</label> <br>
+                  <input type="email" id="email" name="email" class="email"><br><br>
+
+                  <label for="password" class="passwordtext">Contraseña</label> <br>
+                  <input type="password" id="password" name="password" class="password">
+                  <button class="mi-boton">Register</button>
+              </div>
+          </div>
       </div>
-      <button class="mi-boton">Log In</button>
-    </div>
-    </div>
-    <div class="acceder">
-        <p>¿No tienes una cuenta? Haz click en</p>
-        <p href="\register" class="access">Acceder</p>
-    </div>
+  </div>
+  <div class="acceder">
+      <p>¿No tienes una cuenta? Haz click en</p>
+      <p class="access">Acceder</p>
+  </div>
 </body>
+<script>
+document.querySelector('.access').addEventListener('click', function() {
+  document.querySelector('.containerl').classList.toggle('flipped');
+});
+
+</script>
+
 </html>

@@ -325,22 +325,74 @@ body{
 
 /*Log In*/
 
-.logincont {
-  background-color: #0B011E;
-  color: #FF4500;
-  border: 1px solid #FF4500;
-  margin-left: 320px;
-  margin-right: 320px;
+body {
+  perspective: 1000px;
+}
+
+.containerl {
+  perspective: 1000px;
+  position: relative;
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
   margin-top: 60px;
 }
 
-.logincont h1 {
-    font-family: "Roboto Mono", monospace;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    margin-left: 42%;
-    margin-top: 50px;
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.logincont, .registercont {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #0B011E;
+  color: #FF4500;
+  border: 1px solid #FF4500;
+  box-sizing: border-box;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s, visibility 0.6s;
+}
+
+.logincont {
+  transform: rotateY(0deg);
+  opacity: 1;
+  visibility: visible;
+}
+
+.registercont {
+  transform: rotateY(180deg);
+}
+
+.containerl.flipped .card {
+  transform: rotateY(180deg);
+}
+
+.containerl.flipped .logincont {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.containerl.flipped .registercont {
+  opacity: 1;
+  visibility: visible;
+}
+
+.logincont h1, .registercont h1 {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
 }
 
 .linediag2 {
@@ -351,100 +403,94 @@ body{
   display: block;
   color: inherit;
   color: #FF4500;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
   margin-top: 20px;
-  }
+}
+
 .form {
-  margin-left: 70px;
   margin-top: 20px;
   font-family: "Roboto Mono", monospace;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
+
 .form label {
   margin-bottom: 20px;
   font-size: 16px;
 }
 
-
 .form input {
-  width: 540px; /* Ancho del input */
-  height: 40px; /* Alto del input */
-  font-size: 16px; /* Tamaño de la fuente */
-  padding: 8px; /* Espacio interno del input */
-  border-radius: 4px; /* Radio de borde */
-  border: 1px solid #FF4500; /* Borde */
+  width: 100%; /* Full width input */
+  height: 40px; /* Height of the input */
+  font-size: 16px; /* Font size */
+  padding: 8px; /* Padding inside the input */
+  border-radius: 4px; /* Border radius */
+  border: 1px solid #FF4500; /* Border color */
   background-color: #090018;
   color: #FF4500;
-  box-sizing: border-box; /* Tamaño total del elemento incluyendo el borde */
-  margin-bottom: 20px; /* Espacio entre los inputs */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  margin-bottom: 20px; /* Space between inputs */
   margin-top: 10px;
 }
 
 .captcha {
   display: flex;
   align-items: center;
-  transform: translateX(-28px);
 }
 
-/* Estilos para el checkbox */
 input[type="checkbox"] {
   flex: 1;
-  margin-right: 0px; /* Espacio entre el checkbox y el texto */
-  width: 20px; /* Ancho del checkbox */
-  height: 20px; /* Alto del checkbox */
-  border: 2px solid orange; /* Borde naranja */
-  border-radius: 4px; /* Radio de borde */
-  background-color: black; /* Color de fondo negro */
-  cursor: pointer; /* Cursor de puntero */
+  margin-right: 10px; /* Space between checkbox and label */
+  width: 20px; /* Width of the checkbox */
+  height: 20px; /* Height of the checkbox */
+  border: 2px solid orange; /* Orange border */
+  border-radius: 4px; /* Border radius */
+  background-color: black; /* Background color */
+  cursor: pointer; /* Pointer cursor on hover */
 }
+
 input[type="checkbox"]:checked {
-  background-color: orange; /* Cambiar el fondo a naranja cuando está marcado */
+  background-color: orange; /* Background color when checked */
 }
 
 .captcha label {
   flex: 8;
-  transform: translateY(5px);
 }
 
 .mi-boton {
-  background-color: #FF4500; /* Color de fondo */
-  border: none; /* Sin borde */
-  color: white; /* Color de texto */
-  padding: 15px 32px; /* Espacio interior */
-  text-align: center; /* Alineación del texto */
-  text-decoration: none; /* Sin decoración de texto */
-  display: inline-block; /* Mostrar como bloque en línea */
-  font-size: 16px; /* Tamaño de fuente */
-  margin: 4px 2px; /* Margen */
-  cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
-  border-radius: 100px; /* Radio de borde para esquinas redondeadas */
-  margin-top: 30px;
-  margin-bottom: 90px;
+  background-color: #FF4500; /* Background color */
+  border: none; /* No border */
+  color: white; /* Text color */
+  padding: 15px 32px; /* Padding */
+  text-align: center; /* Centered text */
+  text-decoration: none; /* No text decoration */
+  display: inline-block; /* Inline-block display */
+  font-size: 16px; /* Font size */
+  margin: 4px 2px; /* Margin */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 100px; /* Rounded corners */
 }
 
 .acceder {
   display: flex;
-  flex: row;
-  font-size:small;
+  justify-content: center;
+  font-size: small;
   text-align: center;
-  color:#FF4500;
-  margin-left: 38%;
+  color: #FF4500;
   margin-top: 20px;
   font-family: "Roboto Mono", monospace;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .access {
   margin-left: 8px;
-  text-decoration-line: underline;
+  text-decoration: underline;
   cursor: pointer;
 }
-
 
 
 
