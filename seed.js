@@ -20,7 +20,7 @@ const awaitSave = async (object) =>{
 // Seeds
 const athlon = new PcArmada({
     name: "PC AMD ATHLON",
-    cost: 308087,
+    cost: 236990,
     description: "Este equipo fue ensamblado por OrangeBox. PC ideal para uso hogareño y de oficina, excelente relación entre precio y potencia."
     ,
     caracteristicas:{
@@ -57,8 +57,8 @@ const athlon = new PcArmada({
 })
 
 const amdRyzen3 = new PcArmada({
-    name: "AMD Ryzen 3",
-    cost: 297000,
+    name: "PC INTEL CELERON",
+    cost: 319990,
     description: "Este equipo fue ensamblado por OrangeBox. PC ideal para uso hogareño y de oficina, excelente relación entre precio y potencia.",
     caracteristicas:{
         almacenamiento:{
@@ -68,16 +68,18 @@ const amdRyzen3 = new PcArmada({
         },
         conectividad:{
             wifi: true,
+            ethernet: true
         },
         memoria:{
             capacidad: 8,
             expandible: true
         },
         procesador:{
-            fabricante: 'AMD',
-            modelo: "3200G",
+            fabricante: 'Celeron',
+            modelo: "G5925",
             nucleos:{
-                nucle: 4,
+                nucle: 2,
+                subprocesos: 2
             },
             frecuencia: 3.6,
             cache: "4Mb cache"
@@ -163,39 +165,41 @@ const amdRyzen5600 = new PcArmada({
 })
 
 const celeron = new PcArmada({
-    name: "PC INTEL CELERON DUAL",
-    cost: 999999,
-    description: "Este equipo fue ensamblado por OrangeBox. PC ideal para uso hogareño y de oficina, excelente relación entre precio y potencia.",
+    name: "Blue Ryzen",
+    cost: 409990,
+    description: "Este equipo fue ensamblado por OrangeBox.",
     caracteristicas:{
         almacenamiento:{
-            discoDuro: false,
+            discoDuro: true,
             interfaz: "Sata 2.5",
             discoSolido: 240
         },
         conectividad:{
             wifi: true,
-            ethernet: true,
+            bluethoot: false,
         },
         memoria:{
-            capacidad: 4,
+            capacidad: 16,
             expandible: true
         },
         procesador:{
+            fabricante: 'Ryzen',
+            modelo: "5600G",
             fabricante: 'Intel',
             modelo: "3000G",
             nucleos:{
-                nucle: 2,
-                subprocesos: 4
+                nucle: 6,
+                subprocesos: 13
             },
-            frecuencia: 3.5,
-            cache: "4Mb StamartCache"
+            frecuencia: 4.4,
+            cache: "16Mb Cache"
         },
         puertos:{
             usb: true,
             hdmi: true,
             audio: true
         },
-        uso: ['Hogar', 'Gaming', 'Arquitectura']
+        uso: ['Hogar', 'Arquitectura']
     }
 })
 
