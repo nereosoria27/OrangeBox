@@ -154,8 +154,7 @@ const productPatriot = new Product({
 })
 
 
-
 // Array with all components
-const allComps = []
+const allComps = [productAdatad60, productAmdAthlon, productAmdRyzen5600, productAmdRyzen7, productAsrocka620, productAsrockh510, productAsusRog, productAsush50, productFurybeast, productGigabyte, productGt1030, productIntelCore13, productIntelCorei7, productMarkddr3, productPatriot, productPowerColor, productRTX4060ti]
 
 Product.insertMany(allComps)
