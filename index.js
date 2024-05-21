@@ -36,10 +36,6 @@ app.get('/login', (req, res)=>{
     res.render('logIn.ejs')
 })
 
-app.get('/register', (req, res)=>{
-    res.render('register.ejs')
-})
-
 app.get('/home', (req, res)=>{
     res.render('index.ejs')
 })
