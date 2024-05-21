@@ -26,7 +26,7 @@ const pcArmadaSchema = new mongoose.Schema({
             discoDuro: Boolean,
             interfaz:{
                 type: String,
-                required: true
+                required: false
             } ,
             discoSolido: {
                 type: Number,

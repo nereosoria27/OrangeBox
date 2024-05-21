@@ -92,7 +92,7 @@ const amdRyzen3 = new PcArmada({
 })
 
 const amdRyzen5 = new PcArmada({
-    name: "AMD Ryzen 5",
+    name: "Neodab",
     cost: 334990,
     description: "Este equipo fue ensamblado por OrangeBox",
     caracteristicas:{
@@ -126,11 +126,46 @@ const amdRyzen5 = new PcArmada({
         uso: ['Hogar', 'Arquitectura', 'Diseño']
     }
 })
+
+const amdRyzen5600 = new PcArmada({
+    name: 'Gold Ryzen',
+    cost: 383990,
+    description: "Este equipo fue ensamblado por OrangeBox. PC ideal para uso hogareño y de oficina, excelente relación entre precio y potencia.",
+    caracteristicas: {
+        almacenamiento: {
+            discoDuro: true,
+            discoSolido: 240,
+        },
+        conectividad: {
+            wifi: true,
+        },
+        memoria: {
+            capacidad: 8,
+            extendible: true,
+        },
+        procesador: {
+            fabricante: 'AMD',
+            modelo: '5600G',
+            nucleos: {
+                nucle: 6,
+                subprocesos: 12,
+            },
+            frecuencia: 4.40,
+            cache: '16Mb Cache',
+        },
+        puertos:{
+            usb: true,
+            hdmi: true,
+            audio: true
+        },
+        uso: ['Hogar', 'Gaming', 'Diseño', 'Arquitectura']
+    }
+})
+
 const celeron = new PcArmada({
     name: "PC INTEL CELERON DUAL",
     cost: 999999,
-    description: "Este equipo fue ensamblado por OrangeBox. PC ideal para uso hogareño y de oficina, excelente relación entre precio y potencia."
-    ,
+    description: "Este equipo fue ensamblado por OrangeBox. PC ideal para uso hogareño y de oficina, excelente relación entre precio y potencia.",
     caracteristicas:{
         almacenamiento:{
             discoDuro: false,
@@ -146,7 +181,7 @@ const celeron = new PcArmada({
             expandible: true
         },
         procesador:{
-            fabricante: 'Athlon',
+            fabricante: 'Intel',
             modelo: "3000G",
             nucleos:{
                 nucle: 2,
