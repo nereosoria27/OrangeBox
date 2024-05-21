@@ -275,16 +275,41 @@ const productGabineteV350 = new Product({
     cost: 184990,
     description: 'Dimensiones de la caja (mm) 550 mm x 250 mm x 550 mm. Color: NEGRO',
     tipo: 'Gabinete',
-    fabricante: 'Thermaltake'
+    fabricante: 'CoolerMaster'
 })
 
+const productCoolerHyper = new Product({
+    name: 'FAN COOLER CPU COOLER MASTER HYPER',
+    cost: 58990,
+    description: 'Dimensiones del ventilador (largo x ancho x alto): 120 x 120 x 25mm',
+    tipo: 'Cooler',
+    fabricante: 'CoolerMaster'
+})
 
+const productCoolerMaster = new Product({
+    name: 'FAN COOLER CPU COOLER MASTER MA610P',
+    cost: 107990,
+    description: 'Dimensiones del ventilador (L x A x A): 130,9 x 112,8 x 170,4 mm',
+    tipo: 'Cooler',
+    fabricante: 'CoolerMaster'
+})
 
+const productCoolerCorsairH150I = new Product({
+    name: 'WATER COOLER CORSAIR H150I 360MM CAPELLIX XT WHITE',
+    cost: 424990,
+    description: 'Dimensiones del ventilador (mm) 397 mm x 119,6 mm x 119,6 mm. Cantidad: 3',
+    tipo: 'Cooler',
+    fabricante: 'Corsair'
+})
 
-
-
-
+const productCoolerCorsairH100 = new Product({
+    name: 'WATER COOLER CORSAIR H100 ARGB 240MM',
+    cost: 154990,
+    description: 'Dimensiones de la caja (mm) 240 mm x 150 mm x 230 mm. Cantidad: 2',
+    tipo: 'Cooler',
+    fabricante: 'Corsair'
+})
 // Array with all components
-const allComps = [productAdatad60, productAmdAthlon, productAmdRyzen5600, productAmdRyzen7, productAsrocka620, productAsrockh510, productAsusRog, productAsush50, productFurybeast, productGigabyte, productGt1030, productIntelCore13, productIntelCorei7, productMarkddr3, productPatriot, productPowerColor, productRTX4060ti, productSeagate2, productSeagate8, productWestern1, productWestern6, productAdata512, productAdata2, productPatriot480, productPatriot960, productAsusNvidia, productAsusRogStrix, productGigaByteRadeon, productGigaByteNvidia, productGabinete2000D, productGabinete5000X, productGabineteH350, productGabineteV350]
+const allComps = [productAdatad60, productAmdAthlon, productAmdRyzen5600, productAmdRyzen7, productAsrocka620, productAsrockh510, productAsusRog, productAsush50, productFurybeast, productGigabyte, productGt1030, productIntelCore13, productIntelCorei7, productMarkddr3, productPatriot, productPowerColor, productRTX4060ti, productSeagate2, productSeagate8, productWestern1, productWestern6, productAdata512, productAdata2, productPatriot480, productPatriot960, productAsusNvidia, productAsusRogStrix, productGigaByteRadeon, productGigaByteNvidia, productGabinete2000D, productGabinete5000X, productGabineteH350, productGabineteV350, productCoolerHyper, productCoolerMaster, productCoolerCorsairH150I, productCoolerCorsairH100]
 
 Product.insertMany(allComps)
