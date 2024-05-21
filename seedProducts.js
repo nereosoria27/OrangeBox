@@ -17,4 +17,15 @@ const awaitSave = async (object) =>{
 }
 
 // Seeding
+const gt1030 = new Product ({
+    name: 'NVIDIA GT1030 DDR5',
+    cost: 129999,
+    description: 'Resolución: (máxima analógica) 1920 x 1200 Pixeles',
+    tipo: 'Placa de Video',
+    fabricante: 'NVIDIA'
+})
 
+// Array with all components
+const allComps = []
+
+Product.insertMany(allComps)
