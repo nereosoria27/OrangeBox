@@ -4,6 +4,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const PcArmada = require('./models/pcArmada')
 const Product = require('./models/product')
+const User = require('./models/users')
 
 // DB joining
 mongoose.connect('mongodb://localhost:27017/orangebox')
