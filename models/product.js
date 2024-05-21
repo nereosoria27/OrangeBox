@@ -24,7 +24,7 @@ const productSchema = new mongoose.Schema({
     fabricante: {
         required: false,
         type: String,
-        enum: ['AMD', 'Intel', 'ASRock', 'ASUS', 'NVIDIA', 'Crucial', 'MarkVision', 'Seagate', 'WesternDigital', 'HIK', 'ADATA', 'Gamdias']
+        enum: ['AMD', 'Intel', 'ASRock', 'ASUS', 'NVIDIA', 'Crucial', 'Patriot', 'MarkVision', 'Fury', 'Seagate', 'WesternDigital', 'HIK', 'ADATA', 'Gamdias', 'Red Dragon']
     }
 })
 
