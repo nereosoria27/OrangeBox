@@ -1,6 +1,5 @@
 const mongoose = require('mongoose')
 const PcArmada = require('./models/pcArmada')
-const Product = require('./models/product')
 
 // DB joining
 mongoose.connect('mongodb://localhost:27017/orangebox')
