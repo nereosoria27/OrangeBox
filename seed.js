@@ -129,7 +129,7 @@ const amdRyzen5 = new PcArmada({
     }
 })
 const celeron = new PcArmada({
-    name: "PC AMD BLUE RYZEN",
+    name: "Blue Ryzen",
     cost: 409990,
     description: "Este equipo fue ensamblado por OrangeBox."
     ,
