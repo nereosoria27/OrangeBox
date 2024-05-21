@@ -4,6 +4,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const PcArmada = require('./models/pcArmada')
 const Product = require('./models/product')
+const User = require('./models/users')
 
 // DB joining
 mongoose.connect('mongodb://localhost:27017/orangebox')
@@ -32,8 +33,13 @@ app.set('views', path.join(__dirname, '/views'))
 app.use(express.static('public'))
 
 // Main
+// Si el usuario está autenticado, mostrar opciones de navegación alternativas
 app.get('/', (req, res)=>{
+    //if (req.isAuthenticated()) {
+    //    res.render('index-auth.ejs')
+   // } else {
     res.render('index.ejs')
+   // }
 })
 
 // Other routes
@@ -41,13 +47,21 @@ app.get('/login', (req, res)=>{
     res.render('login.ejs')
 })
 
-app.get('/register', (req, res)=>{
-    res.render('register.ejs')
-})
-
 app.get('/pc-armadas', (req, res)=>{
     // {pcArray requets from db falta hacer jsakdjsdkajsdkjskdj}
     res.render('pcArmadas.ejs')
+})
+
+app.get('/carrito', (req, res)=>{
+    res.render('carrito.ejs')
+})
+
+app.get('/components', (req, res)=>{
+    res.render('components.ejs')
+})
+
+app.get('about-us', (req, res)=>{
+    res.render(aboutUs.ejs)
 })
 
 // Listen to port (port is in Server config at line 4)
