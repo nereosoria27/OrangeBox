@@ -10,7 +10,7 @@ const productSchema = new mongoose.Schema({
     cost: {
         type: Number,
         required: true,
-        min: 250000
+        min: 10000
     },
     description: {
         type: String,
