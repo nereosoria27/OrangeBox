@@ -6,9 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <% for (pc of pcArray){ %>
+    <% for (pc of pcArmadas){ %>
         <section id="detectClick">
-            <a href="<% `/${pc.name}` %>">
+            <a href="/pc-armadas/<%= pc._id">
                 <h1><%= pc.name %></h1>
                 <p><%= pc.cost %></p>
                 <p><%= pc.description %></p>
