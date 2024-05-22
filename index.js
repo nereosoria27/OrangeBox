@@ -46,9 +46,13 @@ app.get('/', (req, res)=>{
 app.get('/login', (req, res)=>{
     res.render('login.ejs')
 })
-
+//pcArray = []
+//for (product of Product){
+//    pcArray.push(product)
+//}
 app.get('/pc-armadas', (req, res)=>{
-    // {pcArray requets from db falta hacer jsakdjsdkajsdkjskdj}
+    // {pcArray: pcArray1}
+    //pcArray1 = this.pcArray
     res.render('pcArmadas.ejs')
 })
 
@@ -61,8 +65,14 @@ app.get('/components', (req, res)=>{
 })
 
 app.get('about-us', (req, res)=>{
-    res.render(aboutUs.ejs)
+    res.render('aboutUs.ejs')
 })
+
+//for (pc of pcArray){
+//  app.get(`/${pc.name}`, (req, res)=>{
+//      res.render(`${pc.name}.ejs`)
+//    })
+//}
 
 // Listen to port (port is in Server config at line 4)
 app.listen(port, ()=>{

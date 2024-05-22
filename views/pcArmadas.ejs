@@ -6,12 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    <% allPcs = pcArmadas.find({}) %>
-    <% for (pc of allPcs){ %>
-        <div>
-            <p><%= pc.getComponents %></p>
-        </div>
-
-    <% } %>
+    <% for (pc of pcArray){ %>
+        <section id="detectClick">
+            <a href="<% `/${pc.name}` %>">
+                <h1><%= pc.name %></h1>
+                <p><%= pc.cost %></p>
+                <p><%= pc.description %></p>
+            </a>       
+        </section>
+   <% } %>
 </body>
 </html>
