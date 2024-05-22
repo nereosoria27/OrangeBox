@@ -11,7 +11,7 @@ const pcArmadaSchema = new mongoose.Schema({
     cost: {
         type: Number,
         required: true,
-        min: 250000
+        min: 20000
     },
     description: {
         type: String,
@@ -48,19 +48,19 @@ const pcArmadaSchema = new mongoose.Schema({
         graficos:{
             motor:{
                 type: String,
-                required: true
+                required: false
             },
             modelo:{
                 type: String,
-                required: true
+                required: false
             },
             vram: {
                 type: Number,
-                required: true
+                required: false
             },
             memoria:{
                 type: String,
-                required: true
+                required: false
             }
         },
 
@@ -97,8 +97,8 @@ const pcArmadaSchema = new mongoose.Schema({
                 subprocesos:{
                     type: Number,
                     required: false,
-                    max: 16,
-                    min: 4,
+                    max: 64,
+                    min: 2,
                 }
             },
             frecuencia: {

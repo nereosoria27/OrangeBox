@@ -10,7 +10,7 @@ const productSchema = new mongoose.Schema({
     cost: {
         type: Number,
         required: true,
-        min: 250000
+        min: 10000
     },
     description: {
         type: String,
@@ -24,7 +24,7 @@ const productSchema = new mongoose.Schema({
     fabricante: {
         required: false,
         type: String,
-        enum: ['AMD', 'Intel', 'ASRock', 'ASUS', 'NVIDIA', 'Crucial', 'Patriot', 'MarkVision', 'Fury', 'Seagate', 'WesternDigital', 'HIK', 'ADATA', 'Gamdias', 'Red Dragon']
+        enum: ['AMD', 'Intel', 'ASRock', 'ASUS', 'NVIDIA', 'Crucial', 'Patriot', 'MarkVision', 'Fury', 'Seagate', 'WesternDigital', 'HIK', 'ADATA', 'Gamdias', 'Red Dragon', 'PowerColor', 'GigaByte', 'Corsair', 'Thermaltake', 'CoolerMaster' ]
     }
 })
 
