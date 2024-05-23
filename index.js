@@ -46,6 +46,7 @@ app.get('/', (req, res)=>{
 app.get('/login', (req, res)=>{
     res.render('login.ejs')
 })
+
 app.get('/pc-armadas', async (req, res) => {
     try {
       const pcArmadas = await PcArmada.find({})
