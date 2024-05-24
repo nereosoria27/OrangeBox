@@ -13,15 +13,6 @@ const PcArmada = require('./models/pcArmada');
 const Product = require('./models/product');
 const User = require('./models/users');
 
-<<<<<<< HEAD
-// DB joining
-mongoose.connect('mongodb://localhost:27017/orangebox', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-})
-    .then(() => {
-        console.log("Connection successful");
-=======
 // DB conection
 mongoose.connect('mongodb://localhost:27017/orangebox')
     .then(()=>{
@@ -29,7 +20,6 @@ mongoose.connect('mongodb://localhost:27017/orangebox')
     })
     .catch((err)=>{
         console.log(err)
->>>>>>> Luna
     })
     .catch((err) => {
         console.log(err);
@@ -66,13 +56,6 @@ app.get('/', (req, res) => {
     res.render('index.ejs');
 });
 
-app.get('/login', (req, res) => {
-    res.render('login.ejs');
-});
-
-app.get('/pc-armadas', (req, res) => {
-    res.render('pcArmadas.ejs');
-});
 // Pc Armadas routes
 app.get('/pc-armadas', async (req, res) => {
     try {
