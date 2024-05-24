@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= component.name %></title>
+</head>
+<body>
+    <section>
+        <h1><%= component.name %></h1>
+        <h3>$<%= component.cost%></h3>
+        <% if (component.description) {%>
+            <p><%= component.description %></p>
+        <% } %>
+        <p><%= component.tipo %></p>
+        <% if (component.fabricante) {%>
+            <p><%= component.fabricante %></p>
+        <% } %>
+    </section>
+</body>
+</html>
