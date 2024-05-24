@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Feature</title>
+</head>
+<body>
+    <h1>Create new components!</h1>
+    <section>
+        <form action="/components" method="post">
+            <label for="name">Name:</label>
+            <input type="text" name="name">
+            <br>
+            <label for="cost">Cost:</label>
+            <input type="number" name="cost">
+            <br>
+            <label for="">Description:</label>
+            <input type="text" name="description">
+            <br>
+            <label for="tipo">Tipo:</label>
+            <select name="tipo" id="">
+                <% for (let enojado of tipito) { %>
+                    <option value="<%= enojado %>"><%= enojado %></option>
+                <% } %>
+            </select>
+            <br>
+            <label for="fabricante">Fabricante:</label>
+            <select name="fabricante" id="">
+                <% for (let fabi of fabricantesito) { %>
+                    <option value="<%= fabi %>"><%= fabi %></option>
+                <% } %>
+            </select>
+            <button>Añadir :3</button>
+        </form>
+    </section>
+</body>
+</html>
