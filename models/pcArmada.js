@@ -135,9 +135,7 @@ const pcArmadaSchema = new mongoose.Schema({
 })
 
 // pcArmada Virtual: Get Components
-pcArmadaSchema.virtual('getComponents').get(function(){
-    return `${this.caracteristicas}`
-})
+
 
 // PcArmada model
 const PcArmada = mongoose.model('PcArmada', pcArmadaSchema)

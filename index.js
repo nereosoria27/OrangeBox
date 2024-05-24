@@ -6,7 +6,7 @@ const PcArmada = require('./models/pcArmada')
 const Product = require('./models/product')
 const User = require('./models/users')
 
-// DB joining
+// DB conection
 mongoose.connect('mongodb://localhost:27017/orangebox')
     .then(()=>{
         console.log("Conection succesful")
@@ -42,15 +42,11 @@ app.get('/', (req, res)=>{
    // }
 })
 
-// Other routes
-app.get('/login', (req, res)=>{
-    res.render('login.ejs')
-})
-
+// Pc Armadas routes
 app.get('/pc-armadas', async (req, res) => {
     try {
       const pcArmadas = await PcArmada.find({})
-      res.render('pcArmadas', { pcArmadas })
+      res.render('pcArmadas/index.ejs', { pcArmadas })
     } catch (err) {
       console.log(err)
     }
@@ -58,26 +54,47 @@ app.get('/pc-armadas', async (req, res) => {
   
 app.get('/pc-armadas/:id', async (req, res) => {
     try {
-      const pcArmada = await PcArmada.findById(req.params.id)
-      res.render('pcArmada', { pcArmada })
+        const { id } = req.params
+        const pcArmada = await PcArmada.findById(id)
+        res.render('pcArmadas/pcArmada', { pcArmada })
     } catch (err) {
-      console.log(err)
+        console.log(err)
     }
 })
 
-app.get('/carrito', (req, res)=>{
-    res.render('carrito.ejs')
+// Component routes
+app.get('/components', async (req, res) => {
+    try {
+        const components = await Product.find({})
+        res.render('components/index.ejs', { components })
+    } catch (err){
+        console.log(err)
+    }
+    
 })
 
-app.get('/components', (req, res)=>{
-    res.render('components.ejs')
+app.get('/components/:id', async (req, res) => {
+    try{
+        const { id } = req.params
+        const component = await Product.findById(id)
+        res.render('components/component', { component })
+    } catch (err){
+        console.log(err)
+    }
+})
+
+// Other routes
+app.get('/login', (req, res)=>{
+    res.render('login.ejs')
 })
 
 app.get('about-us', (req, res)=>{
     res.render('aboutUs.ejs')
 })
 
-
+app.get('/carrito', (req, res)=>{
+    res.render('carrito.ejs')
+})
 
 // Listen to port (port is in Server config at line 4)
 app.listen(port, ()=>{

@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nuestras PCs</title>
 </head>
 <body>
     <% for (pc of pcArmadas){ %>
         <section id="detectClick">
-            <a href="/pc-armadas/<%= pc._id">
+            <a href="/pc-armadas/<%= pc._id %>">
                 <h1><%= pc.name %></h1>
-                <p><%= pc.cost %></p>
+                <p>$<%= pc.cost %></p>
                 <p><%= pc.description %></p>
             </a>       
         </section>
