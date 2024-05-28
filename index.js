@@ -47,7 +47,7 @@ app.get('/', (req, res)=>{
    // }
 })
 
-// Pc Armadas routes
+// Pc Armadas routes --------------------------------------------------------
 app.get('/pc-armadas', async (req, res) => {
     try {
       const pcArmadas = await PcArmada.find({})
@@ -56,7 +56,13 @@ app.get('/pc-armadas', async (req, res) => {
       console.log(err)
     }
 })
+
+// Create
+app.get('/pc-armadas/im-an-admin-doing-stuff', (req, res) => {
+    res.render('pcArmadas/new.ejs')
+})
   
+// Each PC Armada
 app.get('/pc-armadas/:id', async (req, res) => {
     try {
         const { id } = req.params
@@ -67,7 +73,7 @@ app.get('/pc-armadas/:id', async (req, res) => {
     }
 })
 
-// Component routes
+// Component routes ------------------------------------------
 app.get('/components', async (req, res) => {
     try {
         const components = await Product.find({})
@@ -78,11 +84,11 @@ app.get('/components', async (req, res) => {
     
 })
 
+// Create
 // Arrays of categories
 const tipito = ['Microprocesador', 'Motherboard', 'Ram', 'Disco Duro', 'Disco SSD', 'Placa de Video', 'Gabinete', 'Cooler']
 const fabricantesito = ['AMD', 'Intel', 'ASRock', 'ASUS', 'NVIDIA', 'Crucial', 'Patriot', 'MarkVision', 'Fury', 'Seagate', 'WesternDigital', 'HIK', 'ADATA', 'Gamdias', 'Red Dragon', 'PowerColor', 'GigaByte', 'Corsair', 'Thermaltake', 'CoolerMaster', 'Vengeance' ]
 
-// Create
 app.get('/components/im-an-admin-doing-stuff', (req, res) => {
     res.render('components/new.ejs', { fabricantesito, tipito })
 })
@@ -93,6 +99,7 @@ app.post('/components', async (req, res) => {
     res.redirect(`/components/${newComponent._id}`)
 })
 
+// Each component
 app.get('/components/:id', async (req, res) => {
     try{
         const { id } = req.params
@@ -103,6 +110,7 @@ app.get('/components/:id', async (req, res) => {
     }
 })
 
+// Edit / Update
 app.get('/components/:id/im-an-admin-doing-stuff', async (req, res) => {
     const { id } = req.params
     const component = await Product.findById(id)

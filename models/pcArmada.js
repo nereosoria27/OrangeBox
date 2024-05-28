@@ -41,7 +41,7 @@ const pcArmadaSchema = new mongoose.Schema({
                 required: true
             },
             ethernet: Boolean,
-            Bluetooth: Boolean
+            bluetooth: Boolean
         },
 
         // Graficos

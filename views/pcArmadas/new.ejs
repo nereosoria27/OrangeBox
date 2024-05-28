@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Feature</title>
+</head>
+<body>
+    <h1>Create new compus 0.o!</h1>
+    <section>
+        <form action="/pc-armadas" method="post">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required>
+            <br>
+            <label for="cost">Cost:</label>
+            <input type="number" name="cost" id="cost" min="20000" required>
+            <br>
+            <label for="description">Description:</label>
+            <input type="text" name="description" id="description">
+            <br>
+            <div>
+                <h3>Caracteristicas</h3>
+                <div>
+                    <h5>Almacenamiento</h5>
+                    <label for="discoDuro">Disco Duro:</label>
+                    <select name="discoDuro" id="discoDuro" required>
+                        <option value="false">No Compatible</option>
+                        <option value="true">Compatible</option>
+                    </select>
+                    <br>
+                    <label for="interfaz">Interfaz:</label>
+                    <input type="text" name="interfaz" id="interfaz">
+                    <br>
+                    <label for="discoSolido">Disco SSD:</label>
+                    <input type="number" name="discoSolido" id="discoSolido" required>
+                    <br>
+                </div>
+                <div>
+                    <h5>Conectividad</h5>
+                    <label for="wifi">WiFi:</label>
+                    <select name="wifi" id="wifi" required>
+                        <option value="false">No Compatible</option>
+                        <option value="true">Compatible</option>
+                    </select>
+                    <br>
+                    <label for="ethernet">Ethernet:</label>
+                    <select name="ethernet" id="ethernet">
+                        <option value="false">No Compatible</option>
+                        <option value="true">Compatible</option>
+                    </select>
+                    <br>
+                    <label for="bluetooth">Bluetooth:</label>
+                    <select name="bluetooth" id="bluetooth">
+                        <option value="false">No Compatible</option>
+                        <option value="true">Compatible</option>
+                    </select>
+                    <br>
+                </div>
+                <div>
+                    <h5>Graficos</h5>
+                    <label for="motor">Motor:</label>
+                    <input type="text" name="motor" id="motor">
+                    <br>
+                    <label for="modeloGraficos">Modelo:</label>
+                    <input type="text" name="modeloGraficos" id="modeloGraficos">
+                    <br>
+                    <label for="vram">VRAM:</label>
+                    <input type="number" name="vram" id="vram">
+                    <br>
+                    <label for="memoriaGraficos">Memoria:</label>
+                    <input type="text" name="memoriaGraficos" id="memoriaGraficos">
+                    <br>
+                </div>
+                <div>
+                    <h5>Memoria</h5>
+                    <label for="capacidad">Capacidad:</label>
+                    <input type="number" name="capacidad" id="capacidad" required>
+                    <br>
+                    <label for="expandible">Expandible:</label>
+                    <select name="expandible" id="expandible" required>
+                        <option value="false">No</option>
+                        <option value="true">Sí</option>
+                    </select>
+                    <br>
+                </div>
+                <div>
+                    <h5>Procesador</h5>
+                    <label for="fabricante">Fabricante:</label>
+                    <select name="fabricante" id="fabricante" required>
+                        <option value="AMD">AMD</option>
+                        <option value="Intel">Intel</option>
+                    </select>
+                    <br>
+                    <label for="modeloProcesador">Modelo:</label>
+                    <input type="text" name="modeloProcesador" id="modeloProcesador">
+                    <br>
+                    <label for="nucle">Núcleos:</label>
+                    <input type="number" name="nucle" id="nucle" min="2" max="8" required>
+                    <br>
+                    <label for="subprocesos">Subprocesos:</label>
+                    <input type="number" name="subprocesos" id="subprocesos" min="2" max="64">
+                    <br>
+                    <label for="frecuencia">Frecuencia:</label>
+                    <input type="number" name="frecuencia" id="frecuencia" required>
+                    <br>
+                    <label for="cache">Cache:</label>
+                    <input type="text" name="cache" id="cache" required>
+                    <br>
+                </div>
+                <div>
+                    <h5>Puertos</h5>
+                    <label for="usb">USB:</label>
+                    <select name="usb" id="usb" required>
+                        <option value="false">No Compatible</option>
+                        <option value="true">Compatible</option>
+                    </select>
+                    <br>
+                    <label for="hdmi">HDMI:</label>
+                    <select name="hdmi" id="hdmi" required>
+                        <option value="false">No Compatible</option>
+                        <option value="true">Compatible</option>
+                    </select>
+                    <br>
+                    <label for="audio">Audio:</label>
+                    <select name="audio" id="audio" required>
+                        <option value="false">No Compatible</option>
+                        <option value="true">Compatible</option>
+                    </select>
+                    <br>
+                </div>
+                <div>
+                    <h5>Uso</h5>
+                    <label for="uso">Uso:</label>
+                    <select name="uso" id="uso" multiple>
+                        <option value="Hogar">Hogar</option>
+                        <option value="Oficina">Oficina</option>
+                        <option value="Gaming">Gaming</option>
+                        <option value="Arquitectura">Arquitectura</option>
+                        <option value="Diseño">Diseño</option>
+                        <option value="Edición">Edición</option>
+                    </select>
+                    <br>
+                </div>                
+            </div>
+            <button type="submit">Añadir UWU :3</button>
+        </form>
+    </section>
+</body>
+</html>
