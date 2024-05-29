@@ -3,9 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Zen+Tokyo+Zoo&display=swap');
 body{
-    background-color:#090018;
-    transform: scale(0.9);
-
+    background-color:#f7f6f8;
+    margin: 0px;
 }
 
 .linea {
@@ -29,26 +28,22 @@ body{
 /* navbar */
 /* */
 .navbar {
-    margin-top: 30px;
     background-color: #0B011E;
-    border-radius: 5px;
     border: 1px solid #FF4500;
     padding: 10px 0;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
-    margin-left: 30px;
-    margin-right: 30px;
+    z-index: 10;
   }
   
   .navbar-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    transform: scale(0.8);
+    margin-right: 800px;
+    transform: scale(0.7);
   }
   
   .navbar-brand {
@@ -99,9 +94,15 @@ body{
 
 /* body */
 
+.bodytotal {
+  display:flex;
+  flex: row;
+}
+.lateralnavbar {
+  background-color: #0B011E;
+}
 .container {
     margin-top: 30px;
-    background-color: #0B011E;
     border-radius: 5px;
     border: 1px solid #FF4500;
     padding: 10px 0;
@@ -321,6 +322,193 @@ body{
 .circle:hover, .flipped-circle:hover, .circle1:hover {
     transform: scale(1.1);
 }
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.aboutus {
+  color:#FF4500;
+  margin-top: 0;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  text-decoration: underline;
+  font-size: 13px;
+  
+}
+
+/*Log In*/
+
+body {
+  perspective: 1000px;
+}
+
+.containerl {
+  perspective: 1000px;
+  position: relative;
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.logincont, .registercont {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #0B011E;
+  color: #FF4500;
+  border: 1px solid #FF4500;
+  box-sizing: border-box;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s, visibility 0.6s;
+}
+
+.logincont {
+  transform: rotateY(0deg);
+  opacity: 1;
+  visibility: visible;
+}
+
+.registercont {
+  transform: rotateY(180deg);
+}
+
+.containerl.flipped .card {
+  transform: rotateY(180deg);
+}
+
+.containerl.flipped .logincont {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.containerl.flipped .registercont {
+  opacity: 1;
+  visibility: visible;
+}
+
+.logincont h1, .registercont h1 {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+
+.linediag2 {
+  background-image: repeating-linear-gradient(-45deg, transparent, transparent 10px, currentcolor 10px, currentcolor 12px);
+  padding: 0px;
+  aspect-ratio: 7 / 1;
+  border: 0px;
+  display: block;
+  color: inherit;
+  color: #FF4500;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 20px;
+}
+
+.form {
+  margin-top: 20px;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.form label {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.form input {
+  width: 100%; /* Full width input */
+  height: 40px; /* Height of the input */
+  font-size: 16px; /* Font size */
+  padding: 8px; /* Padding inside the input */
+  border-radius: 4px; /* Border radius */
+  border: 1px solid #FF4500; /* Border color */
+  background-color: #090018;
+  color: #FF4500;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  margin-bottom: 20px; /* Space between inputs */
+  margin-top: 10px;
+}
+
+.captcha {
+  display: flex;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  flex: 1;
+  margin-right: 10px; /* Space between checkbox and label */
+  width: 20px; /* Width of the checkbox */
+  height: 20px; /* Height of the checkbox */
+  border: 2px solid orange; /* Orange border */
+  border-radius: 4px; /* Border radius */
+  background-color: black; /* Background color */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+input[type="checkbox"]:checked {
+  background-color: orange; /* Background color when checked */
+}
+
+.captcha label {
+  flex: 8;
+}
+
+.mi-boton {
+  background-color: #FF4500; /* Background color */
+  border: none; /* No border */
+  color: white; /* Text color */
+  padding: 15px 32px; /* Padding */
+  text-align: center; /* Centered text */
+  text-decoration: none; /* No text decoration */
+  display: inline-block; /* Inline-block display */
+  font-size: 16px; /* Font size */
+  margin: 4px 2px; /* Margin */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 100px; /* Rounded corners */
+}
+
+.acceder {
+  display: flex;
+  justify-content: center;
+  font-size: small;
+  text-align: center;
+  color: #FF4500;
+  margin-top: 20px;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.access {
+  margin-left: 8px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 
 
   @media (max-width: 768px) {

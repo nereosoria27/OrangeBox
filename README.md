@@ -12,9 +12,6 @@ Welcome to OrangeBox, the premier destination for high-performance gaming PCs, a
 
 - **Product Catalog**: Browse a wide selection of gaming PCs, architecture workstations, and individual components.
 - **Custom PC Builder**: Design your own PC with our intuitive builder tool.
-- **Secure Checkout**: Safe and easy payment options for a smooth purchasing experience.
-- **User Accounts**: Create an account to save your preferences and order history.
-- **Customer Support**: Access to 24/7 customer support via chat and email.
 
 ## Installation
 
@@ -50,22 +47,12 @@ To set up the OrangeBox web application locally, follow these steps:
 ## Usage
 
 - **Home Page**: View featured products and latest deals.
-- **Catalog**: Browse products by category.
-- **Product Detail**: View detailed information about each product, including specifications and reviews.
+- **Product Detail**: View detailed information about each product including specifications.
 - **Custom Builder**: Use the PC builder to customize and configure your ideal machine.
-- **Cart and Checkout**: Review your selections, apply discounts, and complete your purchase.
-
-## Contributing
-
-We welcome contributions from the community. Please read our [contributing guidelines](CONTRIBUTING.md) for more details.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 
 ## Contact
 
-For any questions or support, please contact us at support@orangebox.com.
+For any questions or support, please contact us at iancorradibutcher@gmail.com
 
 ---
 
@@ -81,9 +68,6 @@ Bienvenido a OrangeBox, el destino principal para PCs de alto rendimiento para j
 
 - **Catálogo de Productos**: Navega por una amplia selección de PCs para juegos, estaciones de trabajo para arquitectura y componentes individuales.
 - **Constructor de PCs Personalizadas**: Diseña tu propia PC con nuestra herramienta intuitiva.
-- **Pago Seguro**: Opciones de pago seguras y fáciles para una experiencia de compra fluida.
-- **Cuentas de Usuario**: Crea una cuenta para guardar tus preferencias e historial de pedidos.
-- **Atención al Cliente**: Acceso a soporte al cliente 24/7 a través de chat y correo electrónico.
 
 ## Instalación
 
@@ -119,19 +103,8 @@ Para configurar la aplicación web de OrangeBox localmente, sigue estos pasos:
 ## Uso
 
 - **Página Principal**: Visualiza productos destacados y las últimas ofertas.
-- **Catálogo**: Navega productos por categoría.
-- **Detalle de Producto**: Consulta información detallada sobre cada producto, incluidas especificaciones y reseñas.
-- **Constructor Personalizado**: Usa el constructor de PCs para personalizar y configurar tu máquina ideal.
-- **Carrito y Pago**: Revisa tus selecciones, aplica descuentos y completa tu compra.
-
-## Contribuciones
-
-Damos la bienvenida a contribuciones de la comunidad. Por favor, lee nuestras [directrices de contribución](CONTRIBUTING.md) para más detalles.
-
-## Licencia
-
-Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más información.
+- **Detalle de Producto**: Consulta información detallada sobre cada producto, incluidas las especificaciones.
 
 ## Contacto
 
-Para cualquier pregunta o soporte, por favor contáctanos en support@orangebox.com.
+Para cualquier pregunta o soporte, por favor contáctanos en iancorradibutcher@gmail.com

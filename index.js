@@ -18,6 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Path
 const path = require('path');
+const { mongo } = require('mongoose');
 app.set('views', path.join(__dirname, '/views'));
 app.use(express.static('public'));
 
@@ -80,7 +81,17 @@ app.get('/login', (req, res) => {
     res.render('login.ejs');
 });
 
-// Listen to port
-app.listen(port, () => {
-    console.log(`Listening on port ${port}`);
-});
+const mongodbStatus = false
+app.get('/login', (req, res)=>{
+    res.render('logIn.ejs')
+})
+
+app.get('/about-us', (req, res)=>{
+    res.render('aboutUs.ejs')
+})
+
+// Listen to port (port is in Server config at line 4)
+app.listen(port, ()=>{
+    console.log(`Listening on port ${port}`)
+    console.log('Server opened! No errors')
+})
