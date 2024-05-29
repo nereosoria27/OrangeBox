@@ -44,6 +44,10 @@ app.get('/about-us', (req, res)=>{
     res.render('aboutUs.ejs')
 })
 
+app.get('/components', (req, res)=>{
+    res.render('components.ejs')
+})
+
 // Listen to port (port is in Server config at line 4)
 app.listen(port, ()=>{
     console.log(`Listening on port ${port}`)

@@ -8,6 +8,13 @@ body{
 
 }
 
+.titulo 
+{
+  margin-left: 38%;
+  height: 300px;
+  width: 300px;
+}
+
 .linea {
     margin-top: 60px;
     height: 3px;
@@ -187,7 +194,6 @@ body{
 }*/
 .building {
     display: flex;
-
     color:#FF4500;
     margin-top: 50px;
 
@@ -219,15 +225,16 @@ body{
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    color: rgba(255, 255, 255, 0.74);
   }
   
   .description {
     margin-bottom: 0;
     font-family: "Roboto Condensed", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 450;
-    background-image: linear-gradient(135deg, #0B011E 0%, #FF4500 100%);
-    color: #fcdaa777;
+    font-weight: 400;
+    background-color: #ff4400b9;
+    color: #faf6f0be;
     border-radius: 20px;
     padding: 15px;
     font-style: normal;
@@ -310,6 +317,7 @@ body{
     font-weight: 400;
     font-style: normal;
     margin-right: 90px;
+    color: white;
   }
   
 
