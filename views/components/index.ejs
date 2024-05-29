@@ -24,15 +24,17 @@
 
     <div class="container">
         <div class="containercomponent">
-                <% for (componentito of components){ %>
-                    <section id="detectClick">
-                        <a href="/components/<%= componentito.id %>">
-                            <h1><%= componentito.name %></h1>
-                            <p>$<%= componentito.cost %></p>
-                            <p><%= componentito.tipo %></p>
-                        </a>       
-                    </section>
-            <% } %>
+            <div class="content">
+                    <% for (componentito of components){ %>
+                        <section id="detectClick" class="boxes">
+                            <a href="/components/<%= componentito.id %>">
+                                <h1><%= componentito.name %></h1>
+                                <p>$<%= componentito.cost %></p>
+                                <p><%= componentito.tipo %></p>
+                            </a>       
+                        </section>
+                <% } %>
+            </div>
         </div>
     </div>
 </body>
