@@ -4,16 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuestros Componentes</title>
+    <link rel="stylesheet" href="/style/style.css">
 </head>
 <body>
-    <% for (componentito of components){ %>
-        <section id="detectClick">
-            <a href="/components/<%= componentito.id %>">
-                <h1><%= componentito.name %></h1>
-                <p>$<%= componentito.cost %></p>
-                <p><%= componentito.tipo %></p>
-            </a>       
-        </section>
-   <% } %>
+    <div class="linea"></div>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+              <div class="navbar-links">
+                <a href="/login" class="navbar-link">Log In</a>
+                <a href="/" class="actual-link">Home</a>
+                <a href="/pc-armadas" class="navbar-link">About us</a>
+                <a href="/register" class="navbar-link">Register</a>
+                <a href="mailto:iancorradibutcher@gmail.com">Comprar</a>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <div class="container">
+        <div class="containercomponent">
+                <% for (componentito of components){ %>
+                    <section id="detectClick">
+                        <a href="/components/<%= componentito.id %>">
+                            <h1><%= componentito.name %></h1>
+                            <p>$<%= componentito.cost %></p>
+                            <p><%= componentito.tipo %></p>
+                        </a>       
+                    </section>
+            <% } %>
+        </div>
+    </div>
 </body>
 </html>
