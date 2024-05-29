@@ -18,6 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Path
 const path = require('path');
+const { mongo } = require('mongoose');
 app.set('views', path.join(__dirname, '/views'));
 app.use(express.static('public'));
 
@@ -80,7 +81,10 @@ app.get('/login', (req, res) => {
     res.render('login.ejs');
 });
 
+const mongodbStatus = false
+
 // Listen to port
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
+    console.log(`DataBase Status: ${mongodbStatus}`)
 });
