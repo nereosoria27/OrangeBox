@@ -82,9 +82,16 @@ app.get('/login', (req, res) => {
 });
 
 const mongodbStatus = false
+app.get('/login', (req, res)=>{
+    res.render('logIn.ejs')
+})
 
-// Listen to port
-app.listen(port, () => {
-    console.log(`Listening on port ${port}`);
-    console.log(`DataBase Status: ${mongodbStatus}`)
-});
+app.get('/about-us', (req, res)=>{
+    res.render('aboutUs.ejs')
+})
+
+// Listen to port (port is in Server config at line 4)
+app.listen(port, ()=>{
+    console.log(`Listening on port ${port}`)
+    console.log('Server opened! No errors')
+})
