@@ -8,7 +8,7 @@
 <body>
     <% for (pc of pcArmadas){ %>
         <section id="detectClick">
-            <a href="/pc-armadas/<%= pc._id %>">
+            <a href="/pc-armadas/<%= pc.id %>">
                 <h1><%= pc.name %></h1>
                 <p>$<%= pc.cost %></p>
                 <p><%= pc.description %></p>

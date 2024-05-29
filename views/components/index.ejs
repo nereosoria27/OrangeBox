@@ -8,7 +8,7 @@
 <body>
     <% for (componentito of components){ %>
         <section id="detectClick">
-            <a href="/components/<%= componentito._id %>">
+            <a href="/components/<%= componentito.id %>">
                 <h1><%= componentito.name %></h1>
                 <p>$<%= componentito.cost %></p>
                 <p><%= componentito.tipo %></p>
