@@ -4,18 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= component.name %></title>
+    <link rel="stylesheet" href="/style/style.css">
 </head>
 <body>
-    <section>
-        <h1><%= component.name %></h1>
-        <h3>$<%= component.cost%></h3>
-        <% if (component.description) {%>
-            <p><%= component.description %></p>
-        <% } %>
-        <p><%= component.tipo %></p>
-        <% if (component.fabricante) {%>
-            <p><%= component.fabricante %></p>
-        <% } %>
-    </section>
+    <div class="linea"></div>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+              <div class="navbar-links">
+                <a href="/login" class="navbar-link">Log In</a>
+                <a href="/" class="actual-link">Home</a>
+                <a href="/pc-armadas" class="navbar-link">About us</a>
+                <a href="/register" class="navbar-link">Register</a>
+                <a href="mailto:iancorradibutcher@gmail.com" class="navbar-link">Comprar</a>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <div class="containerl">
+        <div class="logincont">
+            <section>
+                <div class="linea2"></div>
+                <hr class="linediag2">
+                <h1><%= component.name %></h1>
+                <h3>$<%= component.cost%></h3>
+                <% if (component.description) {%>
+                    <p><%= component.description %></p>
+                <% } %>
+                <p><%= component.tipo %></p>
+                <% if (component.fabricante) {%>
+                    <p><%= component.fabricante %></p>
+                <% } %>
+            </section>
+            <p class="mi-boton" style="margin-top: 30px;">Añadir a carrito</p><br>
+            <a href="/components" class="access"style="margin: 20px; margin-top: 30px; color: #FF4500; font-style: normal;">Volver a componentes</a>
+        </div>
+    </div>
 </body>
 </html>

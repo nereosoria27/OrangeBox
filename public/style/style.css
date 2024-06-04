@@ -494,7 +494,11 @@ input[type="checkbox"]:checked {
   font-size: 16px; /* Font size */
   margin: 4px 2px; /* Margin */
   cursor: pointer; /* Pointer cursor on hover */
-  border-radius: 100px; /* Rounded corners */
+  border-radius: 100px; 
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .acceder {
@@ -519,20 +523,67 @@ input[type="checkbox"]:checked {
 /*componentes*/
 
 .containercomponent {
-  background-color: #170a30;
+  background-color: #090018;
   margin: 70px;
   border-radius: 20px;
+  padding: 10px;
+  justify-content: center;
 }
 
 .content {
-  margin: 20px;
   display: grid;
-  grid-template-columns: repeat(6, 170px);
+  grid-template-columns: repeat(5, 200px);
   grid-gap: 10px;
+  margin-left: 20px;
 }
 
 .boxes {
   border-radius: 20px;
+  border: 1px solid #ff4400;
+  background-color: #0B011E;
+  margin: 5px;
+  min-height: 200px;
+  color: #ff4400;
+  transition: 0.3 ease-in;
+}
+
+.boxes:hover {
+  background-color: #ff4400;
+  color: #090018;
+  transition: background-color 0.5s, color 0.5s ease-out;
+}
+
+.boxes a {
+  text-decoration: none;
+  font-size: 17px;
+  text-align: center;
+  color: #ff4400;
+}
+
+.boxes:hover a {
+  color: #0B011E;
+}
+
+.boxes p {
+  color: aliceblue;
+}
+
+.logincont p, h3 {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 20px;
+}
+
+.logincont h3 {
+  text-align: center;
+  color: #19ce64;
+}
+
+.logincont p {
+  margin: 20px;
+  margin-top: 30px;
 }
 
   @media (max-width: 768px) {

@@ -16,7 +16,7 @@
                 <a href="/" class="actual-link">Home</a>
                 <a href="/pc-armadas" class="navbar-link">About us</a>
                 <a href="/register" class="navbar-link">Register</a>
-                <a href="mailto:iancorradibutcher@gmail.com">Comprar</a>
+                <a href="mailto:iancorradibutcher@gmail.com" class="navbar-link">Comprar</a>
               </div>
             </div>
           </nav>
@@ -28,8 +28,8 @@
                     <% for (componentito of components){ %>
                         <section id="detectClick" class="boxes">
                             <a href="/components/<%= componentito.id %>">
-                                <h1><%= componentito.name %></h1>
-                                <p>$<%= componentito.cost %></p>
+                                <h3><%= componentito.name %></h1>
+                                <p style="color: #19ce64;">$<%= componentito.cost %></p>
                                 <p><%= componentito.tipo %></p>
                             </a>       
                         </section>

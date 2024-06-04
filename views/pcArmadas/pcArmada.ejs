@@ -4,89 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= pcArmada.name + " PC" %></title>
+    <link rel="stylesheet" href="/style/style.css">
 </head>
-<body>
-    <section>
-        <h1><%= pcArmada.name %></h1>
-        <p>$<%= pcArmada.cost %></p>
-        <p><%= pcArmada.description %></p>    
-        <div class="caracteristicas">
-            <div class="almacenamiento">
-                <h3>Almacenamiento</h3>
-                <ul>
-                    <li><p>Disco Duro: <%= pcArmada.caracteristicas.almacenamiento.discoDuro ? 'Compatible' : 'No Compatible' %></p></li>
-                    <li><p>Disco SSD: <%= pcArmada.caracteristicas.almacenamiento.discoSolido %> Gb</p></li>
-                    <% if (pcArmada.caracteristicas.almacenamiento.interfaz != null) { %>
-                        <li><p>Interfaz: <%= pcArmada.caracteristicas.almacenamiento.interfaz %></p></li>
-                    <% } %>
-                </ul>
+<body style="padding-bottom: 100px;">
+    <div class="linea"></div>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+              <div class="navbar-links">
+                <a href="/login" class="navbar-link">Log In</a>
+                <a href="/" class="actual-link">Home</a>
+                <a href="/pc-armadas" class="navbar-link">About us</a>
+                <a href="/register" class="navbar-link">Register</a>
+                <a href="mailto:iancorradibutcher@gmail.com" class="navbar-link">Comprar</a>
+              </div>
             </div>
-            <div class="conectividad">
-                <h3>Conectividad</h3>
-                <ul>
-                    <li><p>Wifi: <%= pcArmada.caracteristicas.conectividad.wifi ? 'Compatible' : 'No Compatible' %></p></li>
-                    <li><p>Ethernet: <%= pcArmada.caracteristicas.conectividad.ethernet ? 'Compatible' : 'No Compatible' %></p></li>
-                    <li><p>Bluetooth: <%= pcArmada.caracteristicas.conectividad.bluetooth ? 'Compatible' : 'No Compatible' %></p></li>
-                </ul>
-            </div>
-            <% if (pcArmada.caracteristicas.graficos != null && pcArmada.caracteristicas.graficos != undefined){ %>
-                <div class="graficos">
-                    <h3>Graficos</h3>
-                    <ul>
-                        <li><p>Motor: <%= pcArmada.caracteristicas.graficos.motor %></p></li>
-                        <li><p>Modelo: <%= pcArmada.caracteristicas.graficos.modelo %></p></li>
-                        <li><p>Vram: <%= pcArmada.caracteristicas.graficos.vram %></p></li>
-                        <li><p>Memoria: <%= pcArmada.caracteristicas.graficos.memoria %></p></li>
-                    </ul>
-                </div>
-            <% } %>
-            <div class="memoria">
-                <h3>Memoria RAM</h3>
-                <ul>
-                    <li><p>Capacidad: <%= pcArmada.caracteristicas.memoria.capacidad %></p>Gb</li>
-                    <li><p>Expandible: <%= pcArmada.caracteristicas.memoria.expandible ? 'Si' : 'No' %></p></li>
-                </ul>
-            </div>
-            <div class="procesador">
-                <h3>Procesador</h3>
-                <ul>
-                    <% if (pcArmada.caracteristicas.procesador) { %>
-                        <li><p>Fabricante: <%= pcArmada.caracteristicas.procesador.fabricante %></p></li>
-                        <% if (pcArmada.caracteristicas.procesador.modelo != null) { %>
-                            <li><p>Modelo: <%= pcArmada.caracteristicas.procesador.modelo %></p></li>
-                        <% } %>
-                        <div class="nucleos">
-                            <p>Nucleos</p>
+          </nav>
+    </header>
+    <div class="containerl">
+        <div class="logincont" style="padding-bottom: 1700px;">
+            <section>
+                <h1><%= pcArmada.name %></h1>
+                <p>$<%= pcArmada.cost %></p>
+                <p><%= pcArmada.description %></p>    
+                <div class="caracteristicas">
+                    <div class="almacenamiento">
+                        <h3>Almacenamiento</h3>
+                        <ul>
+                            <li><p>Disco Duro: <%= pcArmada.caracteristicas.almacenamiento.discoDuro ? 'Compatible' : 'No Compatible' %></p></li>
+                            <li><p>Disco SSD: <%= pcArmada.caracteristicas.almacenamiento.discoSolido %> Gb</p></li>
+                            <% if (pcArmada.caracteristicas.almacenamiento.interfaz != null) { %>
+                                <li><p>Interfaz: <%= pcArmada.caracteristicas.almacenamiento.interfaz %></p></li>
+                            <% } %>
+                        </ul>
+                    </div>
+                    <div class="conectividad">
+                        <h3>Conectividad</h3>
+                        <ul>
+                            <li><p>Wifi: <%= pcArmada.caracteristicas.conectividad.wifi ? 'Compatible' : 'No Compatible' %></p></li>
+                            <li><p>Ethernet: <%= pcArmada.caracteristicas.conectividad.ethernet ? 'Compatible' : 'No Compatible' %></p></li>
+                            <li><p>Bluetooth: <%= pcArmada.caracteristicas.conectividad.bluetooth ? 'Compatible' : 'No Compatible' %></p></li>
+                        </ul>
+                    </div>
+                    <% if (pcArmada.caracteristicas.graficos != null && pcArmada.caracteristicas.graficos != undefined){ %>
+                        <div class="graficos">
+                            <h3>Graficos</h3>
                             <ul>
-                                <li><p>Nº de Nucleos: <%= pcArmada.caracteristicas.procesador.nucleos.nucle %></p></li>
-                                <li><p>Subprocesos: <%= pcArmada.caracteristicas.procesador.nucleos.subprocesos %></p></li>
+                                <li><p>Motor: <%= pcArmada.caracteristicas.graficos.motor %></p></li>
+                                <li><p>Modelo: <%= pcArmada.caracteristicas.graficos.modelo %></p></li>
+                                <li><p>Vram: <%= pcArmada.caracteristicas.graficos.vram %></p></li>
+                                <li><p>Memoria: <%= pcArmada.caracteristicas.graficos.memoria %></p></li>
                             </ul>
                         </div>
-                        <li><p>Frecuencia: <%= pcArmada.caracteristicas.procesador.frecuencia %> GHz</p></li>
-                        <li><p>Cache: <%= pcArmada.caracteristicas.procesador.cache %></p></li>
-                    <% } else { %>
-                        <li><p>No compatible</p></li>
                     <% } %>
-                </ul>
-            </div>
+                    <div class="memoria">
+                        <h3>Memoria RAM</h3>
+                        <ul>
+                            <li><p>Capacidad: <%= pcArmada.caracteristicas.memoria.capacidad %></p>Gb</li>
+                            <li><p>Expandible: <%= pcArmada.caracteristicas.memoria.expandible ? 'Si' : 'No' %></p></li>
+                        </ul>
+                    </div>
+                    <div class="procesador">
+                        <h3>Procesador</h3>
+                        <ul>
+                            <% if (pcArmada.caracteristicas.procesador) { %>
+                                <li><p>Fabricante: <%= pcArmada.caracteristicas.procesador.fabricante %></p></li>
+                                <% if (pcArmada.caracteristicas.procesador.modelo != null) { %>
+                                    <li><p>Modelo: <%= pcArmada.caracteristicas.procesador.modelo %></p></li>
+                                <% } %>
+                                <div class="nucleos">
+                                    <p>Nucleos</p>
+                                    <ul>
+                                        <li><p>Nº de Nucleos: <%= pcArmada.caracteristicas.procesador.nucleos.nucle %></p></li>
+                                        <li><p>Subprocesos: <%= pcArmada.caracteristicas.procesador.nucleos.subprocesos %></p></li>
+                                    </ul>
+                                </div>
+                                <li><p>Frecuencia: <%= pcArmada.caracteristicas.procesador.frecuencia %> GHz</p></li>
+                                <li><p>Cache: <%= pcArmada.caracteristicas.procesador.cache %></p></li>
+                            <% } else { %>
+                                <li><p>No compatible</p></li>
+                            <% } %>
+                        </ul>
+                    </div>
+                    
+                    <div class="puertos">
+                        <h3>Puertos</h3>
+                        <ul>
+                            <li><p>Usb: <%= pcArmada.caracteristicas.puertos.usb ? 'Si' : 'No' %></p></li>
+                            <li><p>Hdmi: <%= pcArmada.caracteristicas.puertos.hdmi ? 'Si' : 'No' %></p></li>
+                            <li><p>Audio/Mic: <%= pcArmada.caracteristicas.puertos.audio ? 'Si' : 'No' %></p></li>
+                        </ul>
+                    </div>
+                    <div class="usos">
+                        <h3>Usos</h3>
+                        <ul>
+                            <% for (uso of pcArmada.caracteristicas.uso) {%>
+                                <li><p><%= uso %></p></li>
+                            <% } %>
+                        </ul>
+                    </div>
+                </div>
+                <p class="mi-boton" style="margin-top: 30px;">Añadir a carrito</p><br>
+            <a href="/pc-armadas" class="access"style="margin: 20px; margin-top: 30px; color: #FF4500; font-style: normal;">Volver a PC armadas</a>
+            </section>
             
-            <div class="puertos">
-                <h3>Puertos</h3>
-                <ul>
-                    <li><p>Usb: <%= pcArmada.caracteristicas.puertos.usb ? 'Si' : 'No' %></p></li>
-                    <li><p>Hdmi: <%= pcArmada.caracteristicas.puertos.hdmi ? 'Si' : 'No' %></p></li>
-                    <li><p>Audio/Mic: <%= pcArmada.caracteristicas.puertos.audio ? 'Si' : 'No' %></p></li>
-                </ul>
-            </div>
-            <div class="usos">
-                <h3>Usos</h3>
-                <ul>
-                    <% for (uso of pcArmada.caracteristicas.uso) {%>
-                        <li><p><%= uso %></p></li>
-                    <% } %>
-                </ul>
-            </div>
         </div>
-    </section>
+    </div>
 </body>
 </html>
