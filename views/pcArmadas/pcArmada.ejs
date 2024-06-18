@@ -6,7 +6,7 @@
     <title><%= pcArmada.name + " PC" %></title>
     <link rel="stylesheet" href="/style/style.css">
 </head>
-<body style="padding-bottom: 100px;">
+<body>
     <div class="linea"></div>
     <header>
         <nav class="navbar">
@@ -21,8 +21,7 @@
             </div>
           </nav>
     </header>
-    <div class="containerl">
-        <div class="logincont" style="padding-bottom: 1700px;">
+    <div class="containerpc">
             <section>
                 <h1><%= pcArmada.name %></h1>
                 <p>$<%= pcArmada.cost %></p>
@@ -103,7 +102,6 @@
                             <% } %>
                         </ul>
                     </div>
-                </div>
                 <p class="mi-boton" style="margin-top: 30px;">Añadir a carrito</p><br>
             <a href="/pc-armadas" class="access"style="margin: 20px; margin-top: 30px; color: #FF4500; font-style: normal;">Volver a PC armadas</a>
             </section>

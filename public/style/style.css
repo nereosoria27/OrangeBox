@@ -586,6 +586,24 @@ input[type="checkbox"]:checked {
   margin-top: 30px;
 }
 
+.containerpc {
+  margin-top: 30px;
+    background-color: #0B011E;
+    border-radius: 5px;
+    border: 1px solid #FF4500;
+    padding: 10px 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-bottom: 40px;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+    grid-gap: 10px;
+}
+
   @media (max-width: 768px) {
     .navbar-container {
       flex-direction: column;
