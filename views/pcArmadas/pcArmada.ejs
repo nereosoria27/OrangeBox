@@ -22,10 +22,12 @@
           </nav>
     </header>
     <div class="containerpc">
+        <div class="linea2" style="margin-top: 40px;"></div>
+        <hr class="linediag3">
             <section>
-                <h1><%= pcArmada.name %></h1>
-                <p>$<%= pcArmada.cost %></p>
-                <p><%= pcArmada.description %></p>    
+                <h1 style="color: aliceblue;"><%= pcArmada.name %></h1>
+                <p style="color: #19ce64;">$<%= pcArmada.cost %></p>
+                <p style="color: aliceblue; margin-bottom: 60px;"><%= pcArmada.description %></p>    
                 <div class="caracteristicas">
                     <div class="almacenamiento">
                         <h3>Almacenamiento</h3>
@@ -102,6 +104,7 @@
                             <% } %>
                         </ul>
                     </div>
+                </div>
                 <p class="mi-boton" style="margin-top: 30px;">Añadir a carrito</p><br>
             <a href="/pc-armadas" class="access"style="margin: 20px; margin-top: 30px; color: #FF4500; font-style: normal;">Volver a PC armadas</a>
             </section>

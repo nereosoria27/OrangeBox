@@ -163,6 +163,8 @@ body{
         margin-right: 30px;
         margin-top: 20px;
         }
+
+      
     
 
 
@@ -599,10 +601,35 @@ input[type="checkbox"]:checked {
     margin-right: 30px;
     padding-bottom: 40px;
     margin-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(5, 200px);
-    grid-gap: 10px;
+    color: #ff4400;
+    text-align: center;
+    align-items: center;
 }
+
+.caracteristicas {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  grid-gap: 10px;
+  margin-left: 25.5%;
+
+}
+
+.almacenamiento, .conectividad, .graficos, .procesador, .puertos, .usos, .memoria {
+  border: 1px solid #FF4500;
+}
+
+.linediag3 {
+  background-image: repeating-linear-gradient(-45deg, transparent, transparent 10px, currentcolor 10px, currentcolor 12px);
+  padding: 0px;
+  aspect-ratio: 16 / 1;
+  border: 0px;
+  display: block;
+  color: inherit;
+  color: #FF4500;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 20px;
+  }
 
   @media (max-width: 768px) {
     .navbar-container {
