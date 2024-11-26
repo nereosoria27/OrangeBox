@@ -7,6 +7,8 @@ const productGt1030 = {
     fabricante: 'NVIDIA'
 };
 
+
+
 const productRTX4060ti = {
     name: 'NVIDIA RTX 4060ti',
     cost: 649999,
